@@ -1,0 +1,66 @@
+import baseAPI from "@common/baseAPI";
+import { Dispatch } from "../types/common-props";
+import {
+{{camelCase name}}Failed,
+{{camelCase name}}Load,
+{{camelCase name}}Success,
+delete{{pascalCase name}}Load,
+delete{{pascalCase name}}Success,
+delete{{pascalCase name}}Failed,
+add{{pascalCase name}}Load,
+add{{pascalCase name}}Success,
+add{{pascalCase name}}Failed,
+update{{pascalCase name}}Load,
+update{{pascalCase name}}Success,
+update{{pascalCase name}}Failed,
+} from "@redux/slices/{{snakeCase name}}-slice";
+
+const get{{pascalCase name}} = () => async (dispatch: Dispatch) => {
+dispatch({{camelCase name}}Load());
+baseAPI
+.get(`your_url`)
+.then((response) => {
+dispatch({{camelCase name}}Success(response.data));
+})
+.catch((error) => {
+dispatch({{camelCase name}}Failed(error));
+});
+};
+
+const delete{{pascalCase name}} = () => async (dispatch: Dispatch) => {
+dispatch(delete{{pascalCase name}}Load());
+baseAPI
+.delete(`your_url`)
+.then((response) => {
+dispatch(delete{{pascalCase name}}Success(response.data));
+})
+.catch((error) => {
+dispatch(delete{{pascalCase name}}Failed(error));
+});
+};
+
+const add{{pascalCase name}} = () => async (dispatch: Dispatch) => {
+dispatch(add{{pascalCase name}}Load());
+baseAPI
+.post(`your_url`)
+.then((response) => {
+dispatch(add{{pascalCase name}}Success(response.data));
+})
+.catch((error) => {
+dispatch(add{{pascalCase name}}Failed(error));
+});
+};
+
+const update{{pascalCase name}} = () => async (dispatch: Dispatch) => {
+dispatch(update{{pascalCase name}}Load());
+baseAPI
+.put(`your_url`)
+.then((response) => {
+dispatch(update{{pascalCase name}}Success(response.data));
+})
+.catch((error) => {
+dispatch(update{{pascalCase name}}Failed(error));
+});
+};
+
+export { get{{pascalCase name}}, add{{pascalCase name}}, update{{pascalCase name}}, delete{{pascalCase name}} };

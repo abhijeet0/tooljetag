@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/86f49143-30fc-4162-8e4c-49b9d968701e/AppServices/subscriptions/86f49143-30fc-4162-8e4c-49b9d968701e/resourceGroups/eLabServices/providers/Microsoft.Web/sites/elabNextweb",
+    "appService.deploySubpath": "build"
+}

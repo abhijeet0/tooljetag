@@ -1,0 +1,120 @@
+import { createSlice } from "@reduxjs/toolkit";
+import {
+Add{{pascalCase name}}Init,
+{{pascalCase name}}Init,
+Delete{{pascalCase name}}Init,
+Update{{pascalCase name}}Init,
+} from "../../types/{{snakeCase name}}-props";
+
+
+const {{camelCase name}}Init: {{pascalCase name}}Init = {
+
+};
+
+const get{{pascalCase name}}Slice = createSlice({
+name: "{{snakeCase name}}",
+initialState: {{camelCase name}}Init,
+reducers: {
+{{camelCase name}}Load: (state) => {
+
+},
+{{camelCase name}}Success: (state, action) => {
+
+},
+{{camelCase name}}Failed: (state, action) => {
+
+},
+},
+});
+
+export const {
+{{camelCase name}}Load,
+{{camelCase name}}Success,
+{{camelCase name}}Failed,
+} = get{{pascalCase name}}Slice.actions;
+
+const add{{pascalCase name}}Init: Add{{pascalCase name}}Init = {
+
+};
+
+const add{{pascalCase name}}Slice = createSlice({
+name: "add_{{snakeCase name}}",
+initialState: add{{pascalCase name}}Init,
+reducers: {
+add{{pascalCase name}}Load: (state) => {
+
+},
+add{{pascalCase name}}Success: (state, action) => {
+
+},
+add{{pascalCase name}}Failed: (state, action) => {
+
+},
+},
+});
+
+export const {
+add{{pascalCase name}}Load,
+add{{pascalCase name}}Success,
+add{{pascalCase name}}Failed,
+} = add{{pascalCase name}}Slice.actions;
+
+const update{{pascalCase name}}Init: Update{{pascalCase name}}Init = {
+
+};
+
+const update{{pascalCase name}}Slice = createSlice({
+name: "update_{{snakeCase name}}",
+initialState: update{{pascalCase name}}Init,
+reducers: {
+update{{pascalCase name}}Load: (state) => {
+
+},
+update{{pascalCase name}}Success: (state, action) => {
+
+},
+update{{pascalCase name}}Failed: (state, action) => {
+
+},
+},
+});
+
+export const {
+update{{pascalCase name}}Load,
+update{{pascalCase name}}Success,
+update{{pascalCase name}}Failed,
+} = update{{pascalCase name}}Slice.actions;
+
+const delete{{pascalCase name}}Init: Delete{{pascalCase name}}Init = {
+
+};
+
+const delete{{pascalCase name}}Slice = createSlice({
+name: "delete_{{snakeCase name}}",
+initialState: delete{{pascalCase name}}Init,
+reducers: {
+delete{{pascalCase name}}Load: (state) => {
+
+},
+delete{{pascalCase name}}Success: (state, action) => {
+
+},
+delete{{pascalCase name}}Failed: (state, action) => {
+
+},
+},
+});
+
+export const {
+delete{{pascalCase name}}Load,
+delete{{pascalCase name}}Success,
+delete{{pascalCase name}}Failed,
+} = delete{{pascalCase name}}Slice.actions;
+
+
+export {
+get{{pascalCase name}}Slice,
+delete{{pascalCase name}}Slice,
+add{{pascalCase name}}Slice,
+update{{pascalCase name}}Slice,
+};
